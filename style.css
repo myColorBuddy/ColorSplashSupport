@@ -1,0 +1,76 @@
+:root {
+  --bg: #f6f7fb;
+  --card: #ffffff;
+  --text: #1c2340;
+  --muted: #5b6380;
+  --accent: #2f9e44;
+  --accent-2: #f2b705;
+  --border: #e3e6ef;
+  --hero-1: #0f1b4d;
+  --hero-2: #1d3a8a;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0b1030;
+    --card: #141b45;
+    --text: #eef1ff;
+    --muted: #a8b0d6;
+    --accent: #69db7c;
+    --accent-2: #ffd43b;
+    --border: #26306a;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 17px/1.6 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif;
+}
+a { color: var(--accent); }
+header.hero {
+  background: linear-gradient(160deg, var(--hero-1), var(--hero-2));
+  color: #fff;
+  padding: 40px 16px 32px;
+  text-align: center;
+}
+header.hero img {
+  width: 96px; height: 96px;
+  border-radius: 22px;
+  box-shadow: 0 8px 24px rgba(0,0,0,.35);
+}
+header.hero h1 { margin: 16px 0 4px; font-size: 28px; line-height: 1.2; }
+header.hero p { margin: 0; opacity: .85; }
+nav {
+  display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;
+  padding: 12px 16px;
+  background: var(--card);
+  border-bottom: 1px solid var(--border);
+}
+nav a { text-decoration: none; font-weight: 600; }
+nav a[aria-current="page"] { color: var(--text); }
+main { max-width: 760px; margin: 0 auto; padding: 24px 16px 48px; }
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 16px;
+}
+h2 { font-size: 21px; margin: 28px 0 8px; }
+.card h2:first-child, main > h2:first-child { margin-top: 0; }
+h3 { font-size: 17px; margin: 18px 0 4px; }
+.muted { color: var(--muted); font-size: 15px; }
+.button {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 12px 20px;
+  border-radius: 12px;
+}
+@media (prefers-color-scheme: dark) { .button { color: #0b1030; } }
+ul { padding-left: 22px; }
+footer { text-align: center; padding: 24px 16px 40px; color: var(--muted); font-size: 14px; }
